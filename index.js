@@ -1,9 +1,12 @@
+const dotenv = require('dotenv');
 const express = require("express");
 const cors = require('cors');
 const cpus = require("os").cpus();
 const cluster = require("cluster");
 
 const GetNonceAW = require("./model/getNonce");
+
+dotenv.config();
 
 const port = process.env.PORT || 3030;
 const app = express();
